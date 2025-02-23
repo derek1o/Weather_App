@@ -22,19 +22,19 @@ const response = await fetch(apiurl+ city + `&appid=${apikeys}`);
     document.querySelector('.humidity').innerHTML = data.main.humidity + "%";
 
     if(data.weather[0].main == "Clouds"){
-        weathericon.src = "/weather_app/cloudy.png"
+        weathericon.src = "./cloudy.png"
     }
     else if(data.weather[0].main == "Clear"){
-        weathericon.src="/weather_app/sunny1.png"
+        weathericon.src="./sunny1.png"
     }
     else if(data.weather[0].main == "Rain"){
-         weathericon.src ="/weather_app/rain.png"
+         weathericon.src ="./rain.png"
     }
     else if(data.weather[0].main == "Drizzle"){
-         weathericon.src ="/weather_app/rain.png"
+         weathericon.src ="./rain.png"
     }
     else if(data.weather[0].main == "Mist"){
-         weathericon.src ="/weather_app/mist.png"
+         weathericon.src ="./mist.png"
     }
     document.querySelector('.weather').style.display="block";
     document.querySelector('.error').style.display ="none";
